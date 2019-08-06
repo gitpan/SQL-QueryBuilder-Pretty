@@ -5,7 +5,7 @@ use base qw(SQL::QueryBuilder::Pretty::Rule);
 use strict;
 use warnings;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 use Carp qw(croak);
 use Data::Dumper;
@@ -25,6 +25,8 @@ sub match {
         \[(?:[^\]]|\]\])+\]
     /x;
 }
+
+sub overwrite { 1 }; # Must replace other sub match regEx
 
 1;
 __END__
@@ -86,11 +88,10 @@ and L<SQL::QueryBuilder::Pretty::Rule>.
 
 =head1 AUTHOR
 
-Geoffroy Bruch, C<< <GeoffroyB at cpan.org> >>
+Geoffroy Bruch, C<< <GeoffroyB at github.com> >>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (C) 2019 by Geoffroy Bruch. Published under the terms of 
-the Artistic License 2.0.
+Copyright (C) 2019 by Geoffroy Bruch.
 
 =cut

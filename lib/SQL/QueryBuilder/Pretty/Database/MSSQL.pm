@@ -5,13 +5,15 @@ use base qw(SQL::QueryBuilder::Pretty);
 use strict;
 use warnings;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 use Carp qw(croak);
 use Data::Dumper;
 
+# /!\ MSSQL sub package (Quote) overwrite ANSI sub package (Quote)
 SQL::QueryBuilder::Pretty->search_path( 
-    add => 'SQL::QueryBuilder::Pretty::Database::MSSQL'
+    new => 'SQL::QueryBuilder::Pretty::Database::MSSQL',
+    add => 'SQL::QueryBuilder::Pretty::Database::ANSI',
 );
 
 1;
@@ -59,11 +61,10 @@ L<SQL::QueryBuilder::Pretty>.
 
 =head1 AUTHOR
 
-Geoffroy Bruch, C<< <GeoffroyB at cpan.org> >>
+Geoffroy Bruch, C<< <GeoffroyB at github.com> >>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (C) 2019 by Geoffroy Bruch. Published under the terms of 
-the Artistic License 2.0.
+Copyright (C) 2019 by Geoffroy Bruch.
 
 =cut
