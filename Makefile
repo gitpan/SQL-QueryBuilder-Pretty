@@ -1,7 +1,7 @@
 # This Makefile is for the SQL::QueryBuilder::Pretty extension to perl.
 #
 # It was generated automatically by MakeMaker version
-# 7.3 (Revision: 73000) from the contents of
+# 7.24 (Revision: 72400) from the contents of
 # Makefile.PL. Don't edit this file, edit Makefile.PL instead.
 #
 #       ANY CHANGES MADE HERE WILL BE LOST!
@@ -39,19 +39,19 @@ DLSRC = dl_win32.xs
 EXE_EXT = .exe
 FULL_AR = 
 LD = g++
-LDDLFLAGS = -mdll -s -L"C:\STRAWB~1\perl\lib\CORE" -L"C:\STRAWB~1\c\lib"
-LDFLAGS = -s -L"C:\STRAWB~1\perl\lib\CORE" -L"C:\STRAWB~1\c\lib"
+LDDLFLAGS = -mdll -s -L"c:\Strawberry\perl\lib\CORE" -L"c:\Strawberry\c\lib"
+LDFLAGS = -s -L"c:\Strawberry\perl\lib\CORE" -L"c:\Strawberry\c\lib"
 LIBC = 
 LIB_EXT = .a
 OBJ_EXT = .o
 OSNAME = MSWin32
 OSVERS = 6.3
 RANLIB = rem
-SITELIBEXP = C:\STRAWB~1\perl\site\lib
-SITEARCHEXP = C:\STRAWB~1\perl\site\lib
+SITELIBEXP = c:\Strawberry\perl\site\lib
+SITEARCHEXP = c:\Strawberry\perl\site\lib
 SO = dll
-VENDORARCHEXP = C:\STRAWB~1\perl\vendor\lib
-VENDORLIBEXP = C:\STRAWB~1\perl\vendor\lib
+VENDORARCHEXP = c:\Strawberry\perl\vendor\lib
+VENDORLIBEXP = c:\Strawberry\perl\vendor\lib
 
 
 # --- MakeMaker constants section:
@@ -64,11 +64,11 @@ DIRFILESEP = \\
 DFSEP = $(DIRFILESEP)
 NAME = SQL::QueryBuilder::Pretty
 NAME_SYM = SQL_QueryBuilder_Pretty
-VERSION = 0.03
+VERSION = 0.04
 VERSION_MACRO = VERSION
-VERSION_SYM = 0_03
+VERSION_SYM = 0_04
 DEFINE_VERSION = -D$(VERSION_MACRO)=\"$(VERSION)\"
-XS_VERSION = 0.03
+XS_VERSION = 0.04
 XS_VERSION_MACRO = XS_VERSION
 XS_DEFINE_VERSION = -D$(XS_VERSION_MACRO)=\"$(XS_VERSION)\"
 INST_ARCHLIB = blib\arch
@@ -82,32 +82,32 @@ MAN3EXT = 3
 INSTALLDIRS = site
 DESTDIR = 
 PREFIX = $(SITEPREFIX)
-PERLPREFIX = C:\STRAWB~1\perl
-SITEPREFIX = C:\STRAWB~1\perl\site
-VENDORPREFIX = C:\STRAWB~1\perl\vendor
-INSTALLPRIVLIB = C:\STRAWB~1\perl\lib
+PERLPREFIX = c:\Strawberry\perl
+SITEPREFIX = c:\Strawberry\perl\site
+VENDORPREFIX = c:\Strawberry\perl\vendor
+INSTALLPRIVLIB = c:\Strawberry\perl\lib
 DESTINSTALLPRIVLIB = $(DESTDIR)$(INSTALLPRIVLIB)
-INSTALLSITELIB = C:\STRAWB~1\perl\site\lib
+INSTALLSITELIB = c:\Strawberry\perl\site\lib
 DESTINSTALLSITELIB = $(DESTDIR)$(INSTALLSITELIB)
-INSTALLVENDORLIB = C:\STRAWB~1\perl\vendor\lib
+INSTALLVENDORLIB = c:\Strawberry\perl\vendor\lib
 DESTINSTALLVENDORLIB = $(DESTDIR)$(INSTALLVENDORLIB)
-INSTALLARCHLIB = C:\STRAWB~1\perl\lib
+INSTALLARCHLIB = c:\Strawberry\perl\lib
 DESTINSTALLARCHLIB = $(DESTDIR)$(INSTALLARCHLIB)
-INSTALLSITEARCH = C:\STRAWB~1\perl\site\lib
+INSTALLSITEARCH = c:\Strawberry\perl\site\lib
 DESTINSTALLSITEARCH = $(DESTDIR)$(INSTALLSITEARCH)
-INSTALLVENDORARCH = C:\STRAWB~1\perl\vendor\lib
+INSTALLVENDORARCH = c:\Strawberry\perl\vendor\lib
 DESTINSTALLVENDORARCH = $(DESTDIR)$(INSTALLVENDORARCH)
-INSTALLBIN = C:\STRAWB~1\perl\bin
+INSTALLBIN = c:\Strawberry\perl\bin
 DESTINSTALLBIN = $(DESTDIR)$(INSTALLBIN)
-INSTALLSITEBIN = C:\STRAWB~1\perl\site\bin
+INSTALLSITEBIN = c:\Strawberry\perl\site\bin
 DESTINSTALLSITEBIN = $(DESTDIR)$(INSTALLSITEBIN)
-INSTALLVENDORBIN = C:\STRAWB~1\perl\bin
+INSTALLVENDORBIN = c:\Strawberry\perl\bin
 DESTINSTALLVENDORBIN = $(DESTDIR)$(INSTALLVENDORBIN)
-INSTALLSCRIPT = C:\STRAWB~1\perl\bin
+INSTALLSCRIPT = c:\Strawberry\perl\bin
 DESTINSTALLSCRIPT = $(DESTDIR)$(INSTALLSCRIPT)
-INSTALLSITESCRIPT = C:\STRAWB~1\perl\site\bin
+INSTALLSITESCRIPT = c:\Strawberry\perl\site\bin
 DESTINSTALLSITESCRIPT = $(DESTDIR)$(INSTALLSITESCRIPT)
-INSTALLVENDORSCRIPT = C:\STRAWB~1\perl\bin
+INSTALLVENDORSCRIPT = c:\Strawberry\perl\bin
 DESTINSTALLVENDORSCRIPT = $(DESTDIR)$(INSTALLVENDORSCRIPT)
 INSTALLMAN1DIR = none
 DESTINSTALLMAN1DIR = $(DESTDIR)$(INSTALLMAN1DIR)
@@ -121,16 +121,16 @@ INSTALLSITEMAN3DIR = $(INSTALLMAN3DIR)
 DESTINSTALLSITEMAN3DIR = $(DESTDIR)$(INSTALLSITEMAN3DIR)
 INSTALLVENDORMAN3DIR = $(INSTALLMAN3DIR)
 DESTINSTALLVENDORMAN3DIR = $(DESTDIR)$(INSTALLVENDORMAN3DIR)
-PERL_LIB = C:\STRAWB~1\perl\lib
-PERL_ARCHLIB = C:\STRAWB~1\perl\lib
-PERL_ARCHLIBDEP = C:\STRAWB~1\perl\lib
+PERL_LIB = c:\Strawberry\perl\lib
+PERL_ARCHLIB = c:\Strawberry\perl\lib
+PERL_ARCHLIBDEP = c:\Strawberry\perl\lib
 LIBPERL_A = libperl.a
 FIRST_MAKEFILE = Makefile
 MAKEFILE_OLD = Makefile.old
 MAKE_APERL_FILE = Makefile.aperl
 PERLMAINCC = $(CC)
-PERL_INC = C:\STRAWB~1\perl\lib\CORE
-PERL_INCDEP = C:\STRAWB~1\perl\lib\CORE
+PERL_INC = C:\Strawberry\perl\lib\CORE
+PERL_INCDEP = C:\Strawberry\perl\lib\CORE
 PERL = "C:\Strawberry\perl\bin\perl.exe"
 FULLPERL = "C:\Strawberry\perl\bin\perl.exe"
 ABSPERL = $(PERL)
@@ -146,8 +146,8 @@ PERM_RW = 644
 PERM_RWX = 755
 
 MAKEMAKER   = E:\dev\msc\local\lib\perl5/ExtUtils/MakeMaker.pm
-MM_VERSION  = 7.3
-MM_REVISION = 73000
+MM_VERSION  = 7.24
+MM_REVISION = 72400
 
 # FULLEXT = Pathname for extension directory (eg Foo/Bar/Oracle).
 # BASEEXT = Basename part of FULLEXT. May be just equal FULLEXT. (eg Oracle)
@@ -188,8 +188,8 @@ INST_BOOT        =
 
 # Extra linker info
 EXPORT_LIST        = $(BASEEXT).def
-PERL_ARCHIVE       = $(PERL_INC)\libperl522.a
-PERL_ARCHIVEDEP    = $(PERL_INCDEP)\libperl522.a
+PERL_ARCHIVE       = $(PERL_INC)\libperl520.a
+PERL_ARCHIVEDEP    = $(PERL_INCDEP)\libperl520.a
 PERL_ARCHIVE_AFTER = 
 
 
@@ -215,7 +215,7 @@ TO_INST_PM = lib/SQL/QueryBuilder/Pretty.pm \
 
 
 # --- MakeMaker platform_constants section:
-MM_Win32_VERSION = 7.3
+MM_Win32_VERSION = 7.24
 
 
 # --- MakeMaker tool_autosplit section:
@@ -279,7 +279,7 @@ RCS_LABEL = rcs -Nv$(VERSION_SYM): -q
 DIST_CP = best
 DIST_DEFAULT = tardist
 DISTNAME = SQL-QueryBuilder-Pretty
-DISTVNAME = SQL-QueryBuilder-Pretty-0.03
+DISTVNAME = SQL-QueryBuilder-Pretty-0.04
 
 
 # --- MakeMaker macro section:
@@ -517,7 +517,7 @@ metafile : create_distdir
 	$(NOECHO) $(ECHO) configure_requires: >> META_new.yml
 	$(NOECHO) $(ECHO) "  ExtUtils::MakeMaker: '0'" >> META_new.yml
 	$(NOECHO) $(ECHO) "dynamic_config: 1" >> META_new.yml
-	$(NOECHO) $(ECHO) "generated_by: 'ExtUtils::MakeMaker version 7.3, CPAN::Meta::Converter version 2.150005'" >> META_new.yml
+	$(NOECHO) $(ECHO) "generated_by: 'ExtUtils::MakeMaker version 7.24, CPAN::Meta::Converter version 2.150005'" >> META_new.yml
 	$(NOECHO) $(ECHO) "license: unknown" >> META_new.yml
 	$(NOECHO) $(ECHO) meta-spec: >> META_new.yml
 	$(NOECHO) $(ECHO) "  url: http://module-build.sourceforge.net/META-spec-v1.4.html" >> META_new.yml
@@ -530,8 +530,8 @@ metafile : create_distdir
 	$(NOECHO) $(ECHO) requires: >> META_new.yml
 	$(NOECHO) $(ECHO) "  Module::Pluggable: '3.9'" >> META_new.yml
 	$(NOECHO) $(ECHO) "  Test::More: '0'" >> META_new.yml
-	$(NOECHO) $(ECHO) "version: '0.03'" >> META_new.yml
-	$(NOECHO) $(ECHO) "x_serialization_backend: 'CPAN::Meta::YAML version 0.018'" >> META_new.yml
+	$(NOECHO) $(ECHO) "version: '0.04'" >> META_new.yml
+	$(NOECHO) $(ECHO) "x_serialization_backend: 'CPAN::Meta::YAML version 0.012'" >> META_new.yml
 	-$(NOECHO) $(MV) META_new.yml $(DISTVNAME)/META.yml
 	$(NOECHO) $(ECHO) Generating META.json
 	$(NOECHO) $(ECHO) {{ > META_new.json
@@ -540,7 +540,7 @@ metafile : create_distdir
 	$(NOECHO) $(ECHO) "      \"AndrǸ Rivotti Casimiro ^<rivotti^@cpan.com^>\"" >> META_new.json
 	$(NOECHO) $(ECHO) "   ]," >> META_new.json
 	$(NOECHO) $(ECHO) "   \"dynamic_config\" : 1," >> META_new.json
-	$(NOECHO) $(ECHO) "   \"generated_by\" : \"ExtUtils::MakeMaker version 7.3, CPAN::Meta::Converter version 2.150005\"," >> META_new.json
+	$(NOECHO) $(ECHO) "   \"generated_by\" : \"ExtUtils::MakeMaker version 7.24, CPAN::Meta::Converter version 2.150005\"," >> META_new.json
 	$(NOECHO) $(ECHO) "   \"license\" : [" >> META_new.json
 	$(NOECHO) $(ECHO) "      \"unknown\"" >> META_new.json
 	$(NOECHO) $(ECHO) "   ]," >> META_new.json
@@ -574,7 +574,7 @@ metafile : create_distdir
 	$(NOECHO) $(ECHO) "      }}" >> META_new.json
 	$(NOECHO) $(ECHO) "   }}," >> META_new.json
 	$(NOECHO) $(ECHO) "   \"release_status\" : \"stable\"," >> META_new.json
-	$(NOECHO) $(ECHO) "   \"version\" : \"0.03\"," >> META_new.json
+	$(NOECHO) $(ECHO) "   \"version\" : \"0.04\"," >> META_new.json
 	$(NOECHO) $(ECHO) "   \"x_serialization_backend\" : \"JSON::PP version 2.27300\"" >> META_new.json
 	$(NOECHO) $(ECHO) }} >> META_new.json
 	-$(NOECHO) $(MV) META_new.json $(DISTVNAME)/META.json
@@ -833,7 +833,7 @@ $(FIRST_MAKEFILE) : Makefile.PL $(CONFIGDEP)
 # --- MakeMaker makeaperl section ---
 MAP_TARGET    = perl
 FULLPERL      = "C:\Strawberry\perl\bin\perl.exe"
-MAP_PERLINC   = "-Iblib\arch" "-Iblib\lib" "-IC:\STRAWB~1\perl\lib" "-IC:\STRAWB~1\perl\lib"
+MAP_PERLINC   = "-Iblib\arch" "-Iblib\lib" "-Ic:\Strawberry\perl\lib" "-Ic:\Strawberry\perl\lib"
 
 $(MAP_TARGET) :: $(MAKE_APERL_FILE)
 	$(MAKE) $(USEMAKEFILE) $(MAKE_APERL_FILE) $@
@@ -884,13 +884,13 @@ testdb_static :: static pure_all
 # --- MakeMaker ppd section:
 # Creates a PPD (Perl Package Description) for a binary distribution.
 ppd :
-	$(NOECHO) $(ECHO) "<SOFTPKG NAME=\"SQL-QueryBuilder-Pretty\" VERSION=\"0.03\">" > SQL-QueryBuilder-Pretty.ppd
+	$(NOECHO) $(ECHO) "<SOFTPKG NAME=\"SQL-QueryBuilder-Pretty\" VERSION=\"0.04\">" > SQL-QueryBuilder-Pretty.ppd
 	$(NOECHO) $(ECHO) "    <ABSTRACT>Perl extension to beautify SQL.</ABSTRACT>" >> SQL-QueryBuilder-Pretty.ppd
 	$(NOECHO) $(ECHO) "    <AUTHOR>AndrǸ Rivotti Casimiro &lt;rivotti@cpan.com&gt;</AUTHOR>" >> SQL-QueryBuilder-Pretty.ppd
 	$(NOECHO) $(ECHO) "    <IMPLEMENTATION>" >> SQL-QueryBuilder-Pretty.ppd
 	$(NOECHO) $(ECHO) "        <REQUIRE NAME=\"Module::Pluggable\" VERSION=\"3.9\" />" >> SQL-QueryBuilder-Pretty.ppd
 	$(NOECHO) $(ECHO) "        <REQUIRE NAME=\"Test::More\" />" >> SQL-QueryBuilder-Pretty.ppd
-	$(NOECHO) $(ECHO) "        <ARCHITECTURE NAME=\"MSWin32-x64-multi-thread-5.22\" />" >> SQL-QueryBuilder-Pretty.ppd
+	$(NOECHO) $(ECHO) "        <ARCHITECTURE NAME=\"MSWin32-x64-multi-thread-5.20\" />" >> SQL-QueryBuilder-Pretty.ppd
 	$(NOECHO) $(ECHO) "        <CODEBASE HREF=\"\" />" >> SQL-QueryBuilder-Pretty.ppd
 	$(NOECHO) $(ECHO) "    </IMPLEMENTATION>" >> SQL-QueryBuilder-Pretty.ppd
 	$(NOECHO) $(ECHO) ^</SOFTPKG^> >> SQL-QueryBuilder-Pretty.ppd
