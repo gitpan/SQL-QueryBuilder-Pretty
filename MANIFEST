@@ -21,6 +21,8 @@ lib/SQL/QueryBuilder/Pretty/Database/ANSI/Statement.pm
 lib/SQL/QueryBuilder/Pretty/Database/ANSI/Quote.pm
 lib/SQL/QueryBuilder/Pretty/Database/MySQL.pm
 lib/SQL/QueryBuilder/Pretty/Database/MySQL/Clause.pm
+lib/SQL/QueryBuilder/Pretty/Database/MSSQL/Quote.pm
+lib/SQL/QueryBuilder/Pretty/Database/MSSQL.pm
 lib/SQL/QueryBuilder/Pretty/Print.pm
 lib/SQL/QueryBuilder/Pretty.pm
 Changes

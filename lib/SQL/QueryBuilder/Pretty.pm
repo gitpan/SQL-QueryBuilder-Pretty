@@ -4,7 +4,7 @@ package SQL::QueryBuilder::Pretty;
 use strict;
 use warnings;
 
-our $VERSION = '0.01';
+our $VERSION = '0.04';
 
 use Carp qw(croak);
 use Data::Dumper;
@@ -22,6 +22,14 @@ sub new {
     my $class = shift;
     my %self  = @_;
 
+    # Load all ANSI packages except those already present in current package if package can overwrite
+    my @rules   = $class->rules;
+    my $package = $class =~ s/.*::(\w+)$/$1/r;
+    my @greped  = map { s/.*::\Q$package\E::(.*)=HASH(.*)/$1/r } grep { $_->can('overwrite') && $_->overwrite } @rules;
+    for (@greped){
+        $class->except('SQL::QueryBuilder::Pretty::Database::ANSI::' . $_ );
+    }
+    
     if ( my $database = delete $self{'-database'} ) {
         $class = CORE::join( q{::}, $class, 'Database', $database );
         eval "use $class; 1" or croak $@;
@@ -31,7 +39,7 @@ sub new {
         $class = CORE::join( q{::}, $class, 'Handler', ref $handler );
         eval "use $class; 1" or croak $@;
         return $class->new( %self, 'handler' => $handler );
-    } 
+    }
     else {
         return bless { %self }, ref $class || $class;
     }
@@ -70,7 +78,7 @@ SQL::QueryBuilder::Pretty - Perl extension to beautify SQL.
 
 =head1 VERSION
 
-Version 0.01
+Version 0.03
 
 =head1 SYNOPSIS
 

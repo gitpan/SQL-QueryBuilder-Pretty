@@ -1,20 +1,24 @@
 # This Makefile is for the SQL::QueryBuilder::Pretty extension to perl.
 #
 # It was generated automatically by MakeMaker version
-# 6.42 (Revision: 41145) from the contents of
+# 7.24 (Revision: 72400) from the contents of
 # Makefile.PL. Don't edit this file, edit Makefile.PL instead.
 #
 #       ANY CHANGES MADE HERE WILL BE LOST!
 #
 #   MakeMaker ARGV: ()
 #
+
 #   MakeMaker Parameters:
 
 #     ABSTRACT_FROM => q[lib/SQL/QueryBuilder/Pretty.pm]
-#     AUTHOR => q[André Rivotti Casimiro <rivotti@cpan.com>]
+#     AUTHOR => [q[AndrǸ Rivotti Casimiro <rivotti@cpan.com>]]
+#     BUILD_REQUIRES => {  }
+#     CONFIGURE_REQUIRES => {  }
 #     NAME => q[SQL::QueryBuilder::Pretty]
 #     PL_FILES => {  }
 #     PREREQ_PM => { Module::Pluggable=>q[3.9], Test::More=>q[0] }
+#     TEST_REQUIRES => {  }
 #     VERSION_FROM => q[lib/SQL/QueryBuilder/Pretty.pm]
 #     clean => { FILES=>q[SQL-QueryBuilder-Pretty-*] }
 #     dist => { COMPRESS=>q[gzip -9f], SUFFIX=>q[gz] }
@@ -24,106 +28,111 @@
 
 # --- MakeMaker const_config section:
 
-# These definitions are from config.sh (via /usr/lib/perl/5.10/Config.pm)
-
-# They may have been overridden via Makefile.PL or on the command line
+# These definitions are from config.sh (via C:/Strawberry/perl/lib/Config.pm).
+# They may have been overridden via Makefile.PL or on the command line.
 AR = ar
-CC = cc
-CCCDLFLAGS = -fPIC
-CCDLFLAGS = -Wl,-E
-DLEXT = so
-DLSRC = dl_dlopen.xs
-EXE_EXT = 
-FULL_AR = /usr/bin/ar
-LD = cc
-LDDLFLAGS = -shared -O2 -g -L/usr/local/lib
-LDFLAGS =  -L/usr/local/lib
-LIBC = /lib/libc-2.9.so
+CC = gcc
+CCCDLFLAGS =  
+CCDLFLAGS =  
+DLEXT = xs.dll
+DLSRC = dl_win32.xs
+EXE_EXT = .exe
+FULL_AR = 
+LD = g++
+LDDLFLAGS = -mdll -s -L"c:\Strawberry\perl\lib\CORE" -L"c:\Strawberry\c\lib"
+LDFLAGS = -s -L"c:\Strawberry\perl\lib\CORE" -L"c:\Strawberry\c\lib"
+LIBC = 
 LIB_EXT = .a
 OBJ_EXT = .o
-OSNAME = linux
-OSVERS = 2.6.24-23-server
-RANLIB = :
-SITELIBEXP = /usr/local/share/perl/5.10.0
-SITEARCHEXP = /usr/local/lib/perl/5.10.0
-SO = so
-VENDORARCHEXP = /usr/lib/perl5
-VENDORLIBEXP = /usr/share/perl5
+OSNAME = MSWin32
+OSVERS = 6.3
+RANLIB = rem
+SITELIBEXP = c:\Strawberry\perl\site\lib
+SITEARCHEXP = c:\Strawberry\perl\site\lib
+SO = dll
+VENDORARCHEXP = c:\Strawberry\perl\vendor\lib
+VENDORLIBEXP = c:\Strawberry\perl\vendor\lib
 
 
 # --- MakeMaker constants section:
+
+# Get dmake to read long commands like PM_TO_BLIB
+MAXLINELENGTH = 800000
+
 AR_STATIC_ARGS = cr
-DIRFILESEP = /
+DIRFILESEP = \\
 DFSEP = $(DIRFILESEP)
 NAME = SQL::QueryBuilder::Pretty
 NAME_SYM = SQL_QueryBuilder_Pretty
-VERSION = 0.01
+VERSION = 0.04
 VERSION_MACRO = VERSION
-VERSION_SYM = 0_01
+VERSION_SYM = 0_04
 DEFINE_VERSION = -D$(VERSION_MACRO)=\"$(VERSION)\"
-XS_VERSION = 0.01
+XS_VERSION = 0.04
 XS_VERSION_MACRO = XS_VERSION
 XS_DEFINE_VERSION = -D$(XS_VERSION_MACRO)=\"$(XS_VERSION)\"
-INST_ARCHLIB = blib/arch
-INST_SCRIPT = blib/script
-INST_BIN = blib/bin
-INST_LIB = blib/lib
-INST_MAN1DIR = blib/man1
-INST_MAN3DIR = blib/man3
-MAN1EXT = 1p
-MAN3EXT = 3pm
+INST_ARCHLIB = blib\arch
+INST_SCRIPT = blib\script
+INST_BIN = blib\bin
+INST_LIB = blib\lib
+INST_MAN1DIR = blib\man1
+INST_MAN3DIR = blib\man3
+MAN1EXT = 1
+MAN3EXT = 3
 INSTALLDIRS = site
 DESTDIR = 
-PREFIX = /usr
-PERLPREFIX = $(PREFIX)
-SITEPREFIX = $(PREFIX)/local
-VENDORPREFIX = $(PREFIX)
-INSTALLPRIVLIB = $(PERLPREFIX)/share/perl/5.10
+PREFIX = $(SITEPREFIX)
+PERLPREFIX = c:\Strawberry\perl
+SITEPREFIX = c:\Strawberry\perl\site
+VENDORPREFIX = c:\Strawberry\perl\vendor
+INSTALLPRIVLIB = c:\Strawberry\perl\lib
 DESTINSTALLPRIVLIB = $(DESTDIR)$(INSTALLPRIVLIB)
-INSTALLSITELIB = $(SITEPREFIX)/share/perl/5.10.0
+INSTALLSITELIB = c:\Strawberry\perl\site\lib
 DESTINSTALLSITELIB = $(DESTDIR)$(INSTALLSITELIB)
-INSTALLVENDORLIB = $(VENDORPREFIX)/share/perl5
+INSTALLVENDORLIB = c:\Strawberry\perl\vendor\lib
 DESTINSTALLVENDORLIB = $(DESTDIR)$(INSTALLVENDORLIB)
-INSTALLARCHLIB = $(PERLPREFIX)/lib/perl/5.10
+INSTALLARCHLIB = c:\Strawberry\perl\lib
 DESTINSTALLARCHLIB = $(DESTDIR)$(INSTALLARCHLIB)
-INSTALLSITEARCH = $(SITEPREFIX)/lib/perl/5.10.0
+INSTALLSITEARCH = c:\Strawberry\perl\site\lib
 DESTINSTALLSITEARCH = $(DESTDIR)$(INSTALLSITEARCH)
-INSTALLVENDORARCH = $(VENDORPREFIX)/lib/perl5
+INSTALLVENDORARCH = c:\Strawberry\perl\vendor\lib
 DESTINSTALLVENDORARCH = $(DESTDIR)$(INSTALLVENDORARCH)
-INSTALLBIN = $(PERLPREFIX)/bin
+INSTALLBIN = c:\Strawberry\perl\bin
 DESTINSTALLBIN = $(DESTDIR)$(INSTALLBIN)
-INSTALLSITEBIN = $(SITEPREFIX)/bin
+INSTALLSITEBIN = c:\Strawberry\perl\site\bin
 DESTINSTALLSITEBIN = $(DESTDIR)$(INSTALLSITEBIN)
-INSTALLVENDORBIN = $(VENDORPREFIX)/bin
+INSTALLVENDORBIN = c:\Strawberry\perl\bin
 DESTINSTALLVENDORBIN = $(DESTDIR)$(INSTALLVENDORBIN)
-INSTALLSCRIPT = $(PERLPREFIX)/bin
+INSTALLSCRIPT = c:\Strawberry\perl\bin
 DESTINSTALLSCRIPT = $(DESTDIR)$(INSTALLSCRIPT)
-INSTALLSITESCRIPT = $(SITEPREFIX)/bin
+INSTALLSITESCRIPT = c:\Strawberry\perl\site\bin
 DESTINSTALLSITESCRIPT = $(DESTDIR)$(INSTALLSITESCRIPT)
-INSTALLVENDORSCRIPT = $(VENDORPREFIX)/bin
+INSTALLVENDORSCRIPT = c:\Strawberry\perl\bin
 DESTINSTALLVENDORSCRIPT = $(DESTDIR)$(INSTALLVENDORSCRIPT)
-INSTALLMAN1DIR = $(PERLPREFIX)/share/man/man1
+INSTALLMAN1DIR = none
 DESTINSTALLMAN1DIR = $(DESTDIR)$(INSTALLMAN1DIR)
-INSTALLSITEMAN1DIR = $(SITEPREFIX)/man/man1
+INSTALLSITEMAN1DIR = $(INSTALLMAN1DIR)
 DESTINSTALLSITEMAN1DIR = $(DESTDIR)$(INSTALLSITEMAN1DIR)
-INSTALLVENDORMAN1DIR = $(VENDORPREFIX)/share/man/man1
+INSTALLVENDORMAN1DIR = $(INSTALLMAN1DIR)
 DESTINSTALLVENDORMAN1DIR = $(DESTDIR)$(INSTALLVENDORMAN1DIR)
-INSTALLMAN3DIR = $(PERLPREFIX)/share/man/man3
+INSTALLMAN3DIR = none
 DESTINSTALLMAN3DIR = $(DESTDIR)$(INSTALLMAN3DIR)
-INSTALLSITEMAN3DIR = $(SITEPREFIX)/man/man3
+INSTALLSITEMAN3DIR = $(INSTALLMAN3DIR)
 DESTINSTALLSITEMAN3DIR = $(DESTDIR)$(INSTALLSITEMAN3DIR)
-INSTALLVENDORMAN3DIR = $(VENDORPREFIX)/share/man/man3
+INSTALLVENDORMAN3DIR = $(INSTALLMAN3DIR)
 DESTINSTALLVENDORMAN3DIR = $(DESTDIR)$(INSTALLVENDORMAN3DIR)
-PERL_LIB = /usr/share/perl/5.10
-PERL_ARCHLIB = /usr/lib/perl/5.10
+PERL_LIB = c:\Strawberry\perl\lib
+PERL_ARCHLIB = c:\Strawberry\perl\lib
+PERL_ARCHLIBDEP = c:\Strawberry\perl\lib
 LIBPERL_A = libperl.a
 FIRST_MAKEFILE = Makefile
 MAKEFILE_OLD = Makefile.old
 MAKE_APERL_FILE = Makefile.aperl
 PERLMAINCC = $(CC)
-PERL_INC = /usr/lib/perl/5.10/CORE
-PERL = /usr/bin/perl
-FULLPERL = /usr/bin/perl
+PERL_INC = C:\Strawberry\perl\lib\CORE
+PERL_INCDEP = C:\Strawberry\perl\lib\CORE
+PERL = "C:\Strawberry\perl\bin\perl.exe"
+FULLPERL = "C:\Strawberry\perl\bin\perl.exe"
 ABSPERL = $(PERL)
 PERLRUN = $(PERL)
 FULLPERLRUN = $(FULLPERL)
@@ -132,19 +141,20 @@ PERLRUNINST = $(PERLRUN) "-I$(INST_ARCHLIB)" "-I$(INST_LIB)"
 FULLPERLRUNINST = $(FULLPERLRUN) "-I$(INST_ARCHLIB)" "-I$(INST_LIB)"
 ABSPERLRUNINST = $(ABSPERLRUN) "-I$(INST_ARCHLIB)" "-I$(INST_LIB)"
 PERL_CORE = 0
+PERM_DIR = 755
 PERM_RW = 644
 PERM_RWX = 755
 
-MAKEMAKER   = /usr/share/perl/5.10/ExtUtils/MakeMaker.pm
-MM_VERSION  = 6.42
-MM_REVISION = 41145
+MAKEMAKER   = E:\dev\msc\local\lib\perl5/ExtUtils/MakeMaker.pm
+MM_VERSION  = 7.24
+MM_REVISION = 72400
 
 # FULLEXT = Pathname for extension directory (eg Foo/Bar/Oracle).
 # BASEEXT = Basename part of FULLEXT. May be just equal FULLEXT. (eg Oracle)
 # PARENT_NAME = NAME without BASEEXT and no trailing :: (eg Foo::Bar)
 # DLBASE  = Basename part of dynamic library. May be just equal BASEEXT.
-MAKE = make
-FULLEXT = SQL/QueryBuilder/Pretty
+MAKE = dmake
+FULLEXT = SQL\QueryBuilder\Pretty
 BASEEXT = Pretty
 PARENT_NAME = SQL::QueryBuilder
 DLBASE = $(BASEEXT)
@@ -160,41 +170,26 @@ C_FILES  =
 O_FILES  = 
 H_FILES  = 
 MAN1PODS = 
-MAN3PODS = lib/SQL/QueryBuilder/Pretty.pm \
-	lib/SQL/QueryBuilder/Pretty/Database/ANSI/Clause.pm \
-	lib/SQL/QueryBuilder/Pretty/Database/ANSI/Comment.pm \
-	lib/SQL/QueryBuilder/Pretty/Database/ANSI/Function.pm \
-	lib/SQL/QueryBuilder/Pretty/Database/ANSI/Identifier.pm \
-	lib/SQL/QueryBuilder/Pretty/Database/ANSI/LogicOperator.pm \
-	lib/SQL/QueryBuilder/Pretty/Database/ANSI/Operator.pm \
-	lib/SQL/QueryBuilder/Pretty/Database/ANSI/Punctuation.pm \
-	lib/SQL/QueryBuilder/Pretty/Database/ANSI/Quote.pm \
-	lib/SQL/QueryBuilder/Pretty/Database/ANSI/Space.pm \
-	lib/SQL/QueryBuilder/Pretty/Database/ANSI/Statement.pm \
-	lib/SQL/QueryBuilder/Pretty/Database/MySQL.pm \
-	lib/SQL/QueryBuilder/Pretty/Database/MySQL/Clause.pm \
-	lib/SQL/QueryBuilder/Pretty/Handler/DBI/db.pm \
-	lib/SQL/QueryBuilder/Pretty/Handler/DBI/db/mysql.pm \
-	lib/SQL/QueryBuilder/Pretty/Print.pm \
-	lib/SQL/QueryBuilder/Pretty/Rule.pm
+MAN3PODS = 
 
 # Where is the Config information that we are using/depend on
-CONFIGDEP = $(PERL_ARCHLIB)$(DFSEP)Config.pm $(PERL_INC)$(DFSEP)config.h
+CONFIGDEP = $(PERL_ARCHLIBDEP)$(DFSEP)Config.pm $(PERL_INCDEP)$(DFSEP)config.h
 
 # Where to build things
-INST_LIBDIR      = $(INST_LIB)/SQL/QueryBuilder
-INST_ARCHLIBDIR  = $(INST_ARCHLIB)/SQL/QueryBuilder
+INST_LIBDIR      = $(INST_LIB)\SQL\QueryBuilder
+INST_ARCHLIBDIR  = $(INST_ARCHLIB)\SQL\QueryBuilder
 
-INST_AUTODIR     = $(INST_LIB)/auto/$(FULLEXT)
-INST_ARCHAUTODIR = $(INST_ARCHLIB)/auto/$(FULLEXT)
+INST_AUTODIR     = $(INST_LIB)\auto\$(FULLEXT)
+INST_ARCHAUTODIR = $(INST_ARCHLIB)\auto\$(FULLEXT)
 
 INST_STATIC      = 
 INST_DYNAMIC     = 
 INST_BOOT        = 
 
 # Extra linker info
-EXPORT_LIST        = 
-PERL_ARCHIVE       = 
+EXPORT_LIST        = $(BASEEXT).def
+PERL_ARCHIVE       = $(PERL_INC)\libperl520.a
+PERL_ARCHIVEDEP    = $(PERL_INCDEP)\libperl520.a
 PERL_ARCHIVE_AFTER = 
 
 
@@ -209,6 +204,8 @@ TO_INST_PM = lib/SQL/QueryBuilder/Pretty.pm \
 	lib/SQL/QueryBuilder/Pretty/Database/ANSI/Quote.pm \
 	lib/SQL/QueryBuilder/Pretty/Database/ANSI/Space.pm \
 	lib/SQL/QueryBuilder/Pretty/Database/ANSI/Statement.pm \
+	lib/SQL/QueryBuilder/Pretty/Database/MSSQL.pm \
+	lib/SQL/QueryBuilder/Pretty/Database/MSSQL/Quote.pm \
 	lib/SQL/QueryBuilder/Pretty/Database/MySQL.pm \
 	lib/SQL/QueryBuilder/Pretty/Database/MySQL/Clause.pm \
 	lib/SQL/QueryBuilder/Pretty/Handler/DBI/db.pm \
@@ -216,50 +213,14 @@ TO_INST_PM = lib/SQL/QueryBuilder/Pretty.pm \
 	lib/SQL/QueryBuilder/Pretty/Print.pm \
 	lib/SQL/QueryBuilder/Pretty/Rule.pm
 
-PM_TO_BLIB = lib/SQL/QueryBuilder/Pretty/Database/ANSI/Quote.pm \
-	blib/lib/SQL/QueryBuilder/Pretty/Database/ANSI/Quote.pm \
-	lib/SQL/QueryBuilder/Pretty/Database/ANSI/Space.pm \
-	blib/lib/SQL/QueryBuilder/Pretty/Database/ANSI/Space.pm \
-	lib/SQL/QueryBuilder/Pretty.pm \
-	blib/lib/SQL/QueryBuilder/Pretty.pm \
-	lib/SQL/QueryBuilder/Pretty/Database/ANSI/Comment.pm \
-	blib/lib/SQL/QueryBuilder/Pretty/Database/ANSI/Comment.pm \
-	lib/SQL/QueryBuilder/Pretty/Database/ANSI/Statement.pm \
-	blib/lib/SQL/QueryBuilder/Pretty/Database/ANSI/Statement.pm \
-	lib/SQL/QueryBuilder/Pretty/Database/ANSI/Function.pm \
-	blib/lib/SQL/QueryBuilder/Pretty/Database/ANSI/Function.pm \
-	lib/SQL/QueryBuilder/Pretty/Database/ANSI/Identifier.pm \
-	blib/lib/SQL/QueryBuilder/Pretty/Database/ANSI/Identifier.pm \
-	lib/SQL/QueryBuilder/Pretty/Handler/DBI/db.pm \
-	blib/lib/SQL/QueryBuilder/Pretty/Handler/DBI/db.pm \
-	lib/SQL/QueryBuilder/Pretty/Print.pm \
-	blib/lib/SQL/QueryBuilder/Pretty/Print.pm \
-	lib/SQL/QueryBuilder/Pretty/Database/ANSI/Operator.pm \
-	blib/lib/SQL/QueryBuilder/Pretty/Database/ANSI/Operator.pm \
-	lib/SQL/QueryBuilder/Pretty/Rule.pm \
-	blib/lib/SQL/QueryBuilder/Pretty/Rule.pm \
-	lib/SQL/QueryBuilder/Pretty/Database/ANSI/Clause.pm \
-	blib/lib/SQL/QueryBuilder/Pretty/Database/ANSI/Clause.pm \
-	lib/SQL/QueryBuilder/Pretty/Database/MySQL.pm \
-	blib/lib/SQL/QueryBuilder/Pretty/Database/MySQL.pm \
-	lib/SQL/QueryBuilder/Pretty/Database/ANSI/LogicOperator.pm \
-	blib/lib/SQL/QueryBuilder/Pretty/Database/ANSI/LogicOperator.pm \
-	lib/SQL/QueryBuilder/Pretty/Database/ANSI/Punctuation.pm \
-	blib/lib/SQL/QueryBuilder/Pretty/Database/ANSI/Punctuation.pm \
-	lib/SQL/QueryBuilder/Pretty/Database/MySQL/Clause.pm \
-	blib/lib/SQL/QueryBuilder/Pretty/Database/MySQL/Clause.pm \
-	lib/SQL/QueryBuilder/Pretty/Handler/DBI/db/mysql.pm \
-	blib/lib/SQL/QueryBuilder/Pretty/Handler/DBI/db/mysql.pm
-
 
 # --- MakeMaker platform_constants section:
-MM_Unix_VERSION = 6.42
-PERL_MALLOC_DEF = -DPERL_EXTMALLOC_DEF -Dmalloc=Perl_malloc -Dfree=Perl_mfree -Drealloc=Perl_realloc -Dcalloc=Perl_calloc
+MM_Win32_VERSION = 7.24
 
 
 # --- MakeMaker tool_autosplit section:
 # Usage: $(AUTOSPLITFILE) FileToSplit AutoDirToSplitInto
-AUTOSPLITFILE = $(ABSPERLRUN)  -e 'use AutoSplit;  autosplit($$ARGV[0], $$ARGV[1], 0, 1, 1)' --
+AUTOSPLITFILE = $(ABSPERLRUN)  -e "use AutoSplit;  autosplit($$$$ARGV[0], $$$$ARGV[1], 0, 1, 1)" --
 
 
 
@@ -267,32 +228,34 @@ AUTOSPLITFILE = $(ABSPERLRUN)  -e 'use AutoSplit;  autosplit($$ARGV[0], $$ARGV[1
 
 
 # --- MakeMaker tools_other section:
-SHELL = /bin/sh
-CHMOD = chmod
-CP = cp
-MV = mv
-NOOP = $(SHELL) -c true
+CHMOD = $(ABSPERLRUN) -MExtUtils::Command -e chmod --
+CP = $(ABSPERLRUN) -MExtUtils::Command -e cp --
+MV = $(ABSPERLRUN) -MExtUtils::Command -e mv --
+NOOP = rem
 NOECHO = @
-RM_F = rm -f
-RM_RF = rm -rf
-TEST_F = test -f
-TOUCH = touch
+RM_F = $(ABSPERLRUN) -MExtUtils::Command -e rm_f --
+RM_RF = $(ABSPERLRUN) -MExtUtils::Command -e rm_rf --
+TEST_F = $(ABSPERLRUN) -MExtUtils::Command -e test_f --
+TOUCH = $(ABSPERLRUN) -MExtUtils::Command -e touch --
 UMASK_NULL = umask 0
-DEV_NULL = > /dev/null 2>&1
-MKPATH = $(ABSPERLRUN) "-MExtUtils::Command" -e mkpath
-EQUALIZE_TIMESTAMP = $(ABSPERLRUN) "-MExtUtils::Command" -e eqtime
-ECHO = echo
-ECHO_N = echo -n
+DEV_NULL = > NUL
+MKPATH = $(ABSPERLRUN) -MExtUtils::Command -e mkpath --
+EQUALIZE_TIMESTAMP = $(ABSPERLRUN) -MExtUtils::Command -e eqtime --
+FALSE = $(ABSPERLRUN)  -e "exit 1" --
+TRUE = $(ABSPERLRUN)  -e "exit 0" --
+ECHO = $(ABSPERLRUN) -l -e "binmode STDOUT, qq{{:raw}}; print qq{{@ARGV}}" --
+ECHO_N = $(ABSPERLRUN)  -e "print qq{{@ARGV}}" --
 UNINST = 0
 VERBINST = 0
-MOD_INSTALL = $(ABSPERLRUN) -MExtUtils::Install -e 'install({@ARGV}, '\''$(VERBINST)'\'', 0, '\''$(UNINST)'\'');' --
-DOC_INSTALL = $(ABSPERLRUN) "-MExtUtils::Command::MM" -e perllocal_install
-UNINSTALL = $(ABSPERLRUN) "-MExtUtils::Command::MM" -e uninstall
-WARN_IF_OLD_PACKLIST = $(ABSPERLRUN) "-MExtUtils::Command::MM" -e warn_if_old_packlist
+MOD_INSTALL = $(ABSPERLRUN) -MExtUtils::Install -e "install([ from_to => {{@ARGV}}, verbose => '$(VERBINST)', uninstall_shadows => '$(UNINST)', dir_mode => '$(PERM_DIR)' ]);" --
+DOC_INSTALL = $(ABSPERLRUN) -MExtUtils::Command::MM -e perllocal_install --
+UNINSTALL = $(ABSPERLRUN) -MExtUtils::Command::MM -e uninstall --
+WARN_IF_OLD_PACKLIST = $(ABSPERLRUN) -MExtUtils::Command::MM -e warn_if_old_packlist --
 MACROSTART = 
 MACROEND = 
 USEMAKEFILE = -f
-FIXIN = $(PERLRUN) "-MExtUtils::MY" -e "MY->fixin(shift)"
+FIXIN = pl2bat.bat
+CP_NONEMPTY = $(ABSPERLRUN) -MExtUtils::Command::MM -e cp_nonempty --
 
 
 # --- MakeMaker makemakerdflt section:
@@ -306,7 +269,7 @@ TARFLAGS = cvf
 ZIP = zip
 ZIPFLAGS = -r
 COMPRESS = gzip -9f
-SUFFIX = gz
+SUFFIX = .gz
 SHAR = shar
 PREOP = $(NOECHO) $(NOOP)
 POSTOP = $(NOECHO) $(NOOP)
@@ -316,7 +279,7 @@ RCS_LABEL = rcs -Nv$(VERSION_SYM): -q
 DIST_CP = best
 DIST_DEFAULT = tardist
 DISTNAME = SQL-QueryBuilder-Pretty
-DISTVNAME = SQL-QueryBuilder-Pretty-0.01
+DISTVNAME = SQL-QueryBuilder-Pretty-0.04
 
 
 # --- MakeMaker macro section:
@@ -341,14 +304,17 @@ DISTVNAME = SQL-QueryBuilder-Pretty-0.01
 
 PASTHRU = LIBPERL_A="$(LIBPERL_A)"\
 	LINKTYPE="$(LINKTYPE)"\
-	PREFIX="$(PREFIX)"
+	PREFIX="$(PREFIX)"\
+	PASTHRU_DEFINE="$(DEFINE) $(PASTHRU_DEFINE)"\
+	PASTHRU_INC="$(INC) $(PASTHRU_INC)"
 
 
 # --- MakeMaker special_targets section:
 .SUFFIXES : .xs .c .C .cpp .i .s .cxx .cc $(OBJ_EXT)
 
-.PHONY: all config static dynamic test linkext manifest blibdirs clean realclean disttest distdir
+.PHONY: all config static dynamic test linkext manifest blibdirs clean realclean disttest distdir pure_all subdirs clean_subdirs makemakerdflt manifypods realclean_subdirs subdirs_dynamic subdirs_pure_nolink subdirs_static subdirs-test_dynamic subdirs-test_static test_dynamic test_static
 
+.USESHELL :
 
 
 # --- MakeMaker c_o section:
@@ -361,11 +327,12 @@ PASTHRU = LIBPERL_A="$(LIBPERL_A)"\
 
 
 # --- MakeMaker top_targets section:
-all :: pure_all manifypods
+all :: pure_all
 	$(NOECHO) $(NOOP)
 
-
 pure_all :: config pm_to_blib subdirs linkext
+	$(NOECHO) $(NOOP)
+
 	$(NOECHO) $(NOOP)
 
 subdirs :: $(MYEXTLIB)
@@ -388,64 +355,68 @@ blibdirs.ts : blibdirs
 
 $(INST_LIBDIR)$(DFSEP).exists :: Makefile.PL
 	$(NOECHO) $(MKPATH) $(INST_LIBDIR)
-	$(NOECHO) $(CHMOD) 755 $(INST_LIBDIR)
+	$(NOECHO) $(CHMOD) $(PERM_DIR) $(INST_LIBDIR)
 	$(NOECHO) $(TOUCH) $(INST_LIBDIR)$(DFSEP).exists
 
 $(INST_ARCHLIB)$(DFSEP).exists :: Makefile.PL
 	$(NOECHO) $(MKPATH) $(INST_ARCHLIB)
-	$(NOECHO) $(CHMOD) 755 $(INST_ARCHLIB)
+	$(NOECHO) $(CHMOD) $(PERM_DIR) $(INST_ARCHLIB)
 	$(NOECHO) $(TOUCH) $(INST_ARCHLIB)$(DFSEP).exists
 
 $(INST_AUTODIR)$(DFSEP).exists :: Makefile.PL
 	$(NOECHO) $(MKPATH) $(INST_AUTODIR)
-	$(NOECHO) $(CHMOD) 755 $(INST_AUTODIR)
+	$(NOECHO) $(CHMOD) $(PERM_DIR) $(INST_AUTODIR)
 	$(NOECHO) $(TOUCH) $(INST_AUTODIR)$(DFSEP).exists
 
 $(INST_ARCHAUTODIR)$(DFSEP).exists :: Makefile.PL
 	$(NOECHO) $(MKPATH) $(INST_ARCHAUTODIR)
-	$(NOECHO) $(CHMOD) 755 $(INST_ARCHAUTODIR)
+	$(NOECHO) $(CHMOD) $(PERM_DIR) $(INST_ARCHAUTODIR)
 	$(NOECHO) $(TOUCH) $(INST_ARCHAUTODIR)$(DFSEP).exists
 
 $(INST_BIN)$(DFSEP).exists :: Makefile.PL
 	$(NOECHO) $(MKPATH) $(INST_BIN)
-	$(NOECHO) $(CHMOD) 755 $(INST_BIN)
+	$(NOECHO) $(CHMOD) $(PERM_DIR) $(INST_BIN)
 	$(NOECHO) $(TOUCH) $(INST_BIN)$(DFSEP).exists
 
 $(INST_SCRIPT)$(DFSEP).exists :: Makefile.PL
 	$(NOECHO) $(MKPATH) $(INST_SCRIPT)
-	$(NOECHO) $(CHMOD) 755 $(INST_SCRIPT)
+	$(NOECHO) $(CHMOD) $(PERM_DIR) $(INST_SCRIPT)
 	$(NOECHO) $(TOUCH) $(INST_SCRIPT)$(DFSEP).exists
 
 $(INST_MAN1DIR)$(DFSEP).exists :: Makefile.PL
 	$(NOECHO) $(MKPATH) $(INST_MAN1DIR)
-	$(NOECHO) $(CHMOD) 755 $(INST_MAN1DIR)
+	$(NOECHO) $(CHMOD) $(PERM_DIR) $(INST_MAN1DIR)
 	$(NOECHO) $(TOUCH) $(INST_MAN1DIR)$(DFSEP).exists
 
 $(INST_MAN3DIR)$(DFSEP).exists :: Makefile.PL
 	$(NOECHO) $(MKPATH) $(INST_MAN3DIR)
-	$(NOECHO) $(CHMOD) 755 $(INST_MAN3DIR)
+	$(NOECHO) $(CHMOD) $(PERM_DIR) $(INST_MAN3DIR)
 	$(NOECHO) $(TOUCH) $(INST_MAN3DIR)$(DFSEP).exists
 
 
 
 # --- MakeMaker linkext section:
 
-linkext :: $(LINKTYPE)
+linkext :: dynamic
 	$(NOECHO) $(NOOP)
 
 
 # --- MakeMaker dlsyms section:
 
-
-# --- MakeMaker dynamic section:
-
-dynamic :: $(FIRST_MAKEFILE) $(INST_DYNAMIC) $(INST_BOOT)
-	$(NOECHO) $(NOOP)
+Pretty.def: Makefile.PL
+	$(PERLRUN) -MExtUtils::Mksymlists \
+     -e "Mksymlists('NAME'=>\"SQL::QueryBuilder::Pretty\", 'DLBASE' => '$(BASEEXT)', 'DL_FUNCS' => {  }, 'FUNCLIST' => [], 'IMPORTS' => {  }, 'DL_VARS' => []);"
 
 
 # --- MakeMaker dynamic_bs section:
 
 BOOTSTRAP =
+
+
+# --- MakeMaker dynamic section:
+
+dynamic :: $(FIRST_MAKEFILE) config $(INST_BOOT) $(INST_DYNAMIC)
+	$(NOECHO) $(NOOP)
 
 
 # --- MakeMaker dynamic_lib section:
@@ -468,42 +439,8 @@ POD2MAN_EXE = $(PERLRUN) "-MExtUtils::Command::MM" -e pod2man "--"
 POD2MAN = $(POD2MAN_EXE)
 
 
-manifypods : pure_all  \
-	lib/SQL/QueryBuilder/Pretty/Database/ANSI/Quote.pm \
-	lib/SQL/QueryBuilder/Pretty/Database/ANSI/Space.pm \
-	lib/SQL/QueryBuilder/Pretty.pm \
-	lib/SQL/QueryBuilder/Pretty/Database/ANSI/Comment.pm \
-	lib/SQL/QueryBuilder/Pretty/Database/ANSI/Statement.pm \
-	lib/SQL/QueryBuilder/Pretty/Database/ANSI/Function.pm \
-	lib/SQL/QueryBuilder/Pretty/Database/ANSI/Identifier.pm \
-	lib/SQL/QueryBuilder/Pretty/Handler/DBI/db.pm \
-	lib/SQL/QueryBuilder/Pretty/Print.pm \
-	lib/SQL/QueryBuilder/Pretty/Database/ANSI/Operator.pm \
-	lib/SQL/QueryBuilder/Pretty/Rule.pm \
-	lib/SQL/QueryBuilder/Pretty/Database/ANSI/Clause.pm \
-	lib/SQL/QueryBuilder/Pretty/Database/MySQL.pm \
-	lib/SQL/QueryBuilder/Pretty/Database/ANSI/LogicOperator.pm \
-	lib/SQL/QueryBuilder/Pretty/Database/ANSI/Punctuation.pm \
-	lib/SQL/QueryBuilder/Pretty/Database/MySQL/Clause.pm \
-	lib/SQL/QueryBuilder/Pretty/Handler/DBI/db/mysql.pm
-	$(NOECHO) $(POD2MAN) --section=$(MAN3EXT) --perm_rw=$(PERM_RW) \
-	  lib/SQL/QueryBuilder/Pretty/Database/ANSI/Quote.pm $(INST_MAN3DIR)/SQL::QueryBuilder::Pretty::Database::ANSI::Quote.$(MAN3EXT) \
-	  lib/SQL/QueryBuilder/Pretty/Database/ANSI/Space.pm $(INST_MAN3DIR)/SQL::QueryBuilder::Pretty::Database::ANSI::Space.$(MAN3EXT) \
-	  lib/SQL/QueryBuilder/Pretty.pm $(INST_MAN3DIR)/SQL::QueryBuilder::Pretty.$(MAN3EXT) \
-	  lib/SQL/QueryBuilder/Pretty/Database/ANSI/Comment.pm $(INST_MAN3DIR)/SQL::QueryBuilder::Pretty::Database::ANSI::Comment.$(MAN3EXT) \
-	  lib/SQL/QueryBuilder/Pretty/Database/ANSI/Statement.pm $(INST_MAN3DIR)/SQL::QueryBuilder::Pretty::Database::ANSI::Statement.$(MAN3EXT) \
-	  lib/SQL/QueryBuilder/Pretty/Database/ANSI/Function.pm $(INST_MAN3DIR)/SQL::QueryBuilder::Pretty::Database::ANSI::Function.$(MAN3EXT) \
-	  lib/SQL/QueryBuilder/Pretty/Database/ANSI/Identifier.pm $(INST_MAN3DIR)/SQL::QueryBuilder::Pretty::Database::ANSI::Identifier.$(MAN3EXT) \
-	  lib/SQL/QueryBuilder/Pretty/Handler/DBI/db.pm $(INST_MAN3DIR)/SQL::QueryBuilder::Pretty::Handler::DBI::db.$(MAN3EXT) \
-	  lib/SQL/QueryBuilder/Pretty/Print.pm $(INST_MAN3DIR)/SQL::QueryBuilder::Pretty::Print.$(MAN3EXT) \
-	  lib/SQL/QueryBuilder/Pretty/Database/ANSI/Operator.pm $(INST_MAN3DIR)/SQL::QueryBuilder::Pretty::Database::ANSI::Operator.$(MAN3EXT) \
-	  lib/SQL/QueryBuilder/Pretty/Rule.pm $(INST_MAN3DIR)/SQL::QueryBuilder::Pretty::Rule.$(MAN3EXT) \
-	  lib/SQL/QueryBuilder/Pretty/Database/ANSI/Clause.pm $(INST_MAN3DIR)/SQL::QueryBuilder::Pretty::Database::ANSI::Clause.$(MAN3EXT) \
-	  lib/SQL/QueryBuilder/Pretty/Database/MySQL.pm $(INST_MAN3DIR)/SQL::QueryBuilder::Pretty::Database::MySQL.$(MAN3EXT) \
-	  lib/SQL/QueryBuilder/Pretty/Database/ANSI/LogicOperator.pm $(INST_MAN3DIR)/SQL::QueryBuilder::Pretty::Database::ANSI::LogicOperator.$(MAN3EXT) \
-	  lib/SQL/QueryBuilder/Pretty/Database/ANSI/Punctuation.pm $(INST_MAN3DIR)/SQL::QueryBuilder::Pretty::Database::ANSI::Punctuation.$(MAN3EXT) \
-	  lib/SQL/QueryBuilder/Pretty/Database/MySQL/Clause.pm $(INST_MAN3DIR)/SQL::QueryBuilder::Pretty::Database::MySQL::Clause.$(MAN3EXT) \
-	  lib/SQL/QueryBuilder/Pretty/Handler/DBI/db/mysql.pm $(INST_MAN3DIR)/SQL::QueryBuilder::Pretty::Handler::DBI::db::mysql.$(MAN3EXT) 
+manifypods : pure_all config 
+	$(NOECHO) $(NOOP)
 
 
 
@@ -530,36 +467,40 @@ clean_subdirs :
 
 clean :: clean_subdirs
 	- $(RM_F) \
-	  *$(LIB_EXT) core \
-	  core.[0-9] $(INST_ARCHAUTODIR)/extralibs.all \
-	  core.[0-9][0-9] $(BASEEXT).bso \
-	  pm_to_blib.ts core.[0-9][0-9][0-9][0-9] \
-	  $(BASEEXT).x $(BOOTSTRAP) \
-	  perl$(EXE_EXT) tmon.out \
-	  *$(OBJ_EXT) pm_to_blib \
-	  $(INST_ARCHAUTODIR)/extralibs.ld blibdirs.ts \
-	  core.[0-9][0-9][0-9][0-9][0-9] *perl.core \
-	  core.*perl.*.? $(MAKE_APERL_FILE) \
-	  perl $(BASEEXT).def \
-	  core.[0-9][0-9][0-9] mon.out \
-	  lib$(BASEEXT).def perlmain.c \
-	  perl.exe so_locations \
-	  $(BASEEXT).exp 
+	  $(BASEEXT).bso $(BASEEXT).def \
+	  $(BASEEXT).exp $(BASEEXT).x \
+	  $(BOOTSTRAP) $(INST_ARCHAUTODIR)\extralibs.all \
+	  $(INST_ARCHAUTODIR)\extralibs.ld $(MAKE_APERL_FILE) \
+	  *$(LIB_EXT) *$(OBJ_EXT) \
+	  *perl.core MYMETA.json \
+	  MYMETA.yml blibdirs.ts \
+	  core core.*perl.*.? \
+	  core.[0-9] core.[0-9][0-9] \
+	  core.[0-9][0-9][0-9] core.[0-9][0-9][0-9][0-9] \
+	  core.[0-9][0-9][0-9][0-9][0-9] lib$(BASEEXT).def \
+	  mon.out perl \
+	  perl$(EXE_EXT) perl.exe \
+	  perlmain.c pm_to_blib \
+	  pm_to_blib.ts so_locations \
+	  tmon.out 
 	- $(RM_RF) \
-	  SQL-QueryBuilder-Pretty-* blib 
+	  SQL-QueryBuilder-Pretty-* blib \
+	  dll.base dll.exp 
+	  $(NOECHO) $(RM_F) $(MAKEFILE_OLD)
 	- $(MV) $(FIRST_MAKEFILE) $(MAKEFILE_OLD) $(DEV_NULL)
 
 
 # --- MakeMaker realclean_subdirs section:
-realclean_subdirs :
+# so clean is forced to complete before realclean_subdirs runs
+realclean_subdirs : clean
 	$(NOECHO) $(NOOP)
 
 
 # --- MakeMaker realclean section:
 # Delete temporary files (via clean) and also delete dist files
-realclean purge ::  clean realclean_subdirs
+realclean purge :: realclean_subdirs
 	- $(RM_F) \
-	  $(MAKEFILE_OLD) $(FIRST_MAKEFILE) 
+	  $(FIRST_MAKEFILE) $(MAKEFILE_OLD) 
 	- $(RM_RF) \
 	  $(DISTVNAME) 
 
@@ -567,22 +508,76 @@ realclean purge ::  clean realclean_subdirs
 # --- MakeMaker metafile section:
 metafile : create_distdir
 	$(NOECHO) $(ECHO) Generating META.yml
-	$(NOECHO) $(ECHO) '--- #YAML:1.0' > META_new.yml
-	$(NOECHO) $(ECHO) 'name:                SQL-QueryBuilder-Pretty' >> META_new.yml
-	$(NOECHO) $(ECHO) 'version:             0.01' >> META_new.yml
-	$(NOECHO) $(ECHO) 'abstract:            Perl extension to beautify SQL.' >> META_new.yml
-	$(NOECHO) $(ECHO) 'license:             ~' >> META_new.yml
-	$(NOECHO) $(ECHO) 'author:              ' >> META_new.yml
-	$(NOECHO) $(ECHO) '    - André Rivotti Casimiro <rivotti@cpan.com>' >> META_new.yml
-	$(NOECHO) $(ECHO) 'generated_by:        ExtUtils::MakeMaker version 6.42' >> META_new.yml
-	$(NOECHO) $(ECHO) 'distribution_type:   module' >> META_new.yml
-	$(NOECHO) $(ECHO) 'requires:     ' >> META_new.yml
-	$(NOECHO) $(ECHO) '    Module::Pluggable:             3.9' >> META_new.yml
-	$(NOECHO) $(ECHO) '    Test::More:                    0' >> META_new.yml
-	$(NOECHO) $(ECHO) 'meta-spec:' >> META_new.yml
-	$(NOECHO) $(ECHO) '    url:     http://module-build.sourceforge.net/META-spec-v1.3.html' >> META_new.yml
-	$(NOECHO) $(ECHO) '    version: 1.3' >> META_new.yml
+	$(NOECHO) $(ECHO) --- > META_new.yml
+	$(NOECHO) $(ECHO) "abstract: 'Perl extension to beautify SQL.'" >> META_new.yml
+	$(NOECHO) $(ECHO) author: >> META_new.yml
+	$(NOECHO) $(ECHO) "  - 'AndrǸ Rivotti Casimiro <rivotti@cpan.com>'" >> META_new.yml
+	$(NOECHO) $(ECHO) build_requires: >> META_new.yml
+	$(NOECHO) $(ECHO) "  ExtUtils::MakeMaker: '0'" >> META_new.yml
+	$(NOECHO) $(ECHO) configure_requires: >> META_new.yml
+	$(NOECHO) $(ECHO) "  ExtUtils::MakeMaker: '0'" >> META_new.yml
+	$(NOECHO) $(ECHO) "dynamic_config: 1" >> META_new.yml
+	$(NOECHO) $(ECHO) "generated_by: 'ExtUtils::MakeMaker version 7.24, CPAN::Meta::Converter version 2.150005'" >> META_new.yml
+	$(NOECHO) $(ECHO) "license: unknown" >> META_new.yml
+	$(NOECHO) $(ECHO) meta-spec: >> META_new.yml
+	$(NOECHO) $(ECHO) "  url: http://module-build.sourceforge.net/META-spec-v1.4.html" >> META_new.yml
+	$(NOECHO) $(ECHO) "  version: '1.4'" >> META_new.yml
+	$(NOECHO) $(ECHO) "name: SQL-QueryBuilder-Pretty" >> META_new.yml
+	$(NOECHO) $(ECHO) no_index: >> META_new.yml
+	$(NOECHO) $(ECHO) "  directory:" >> META_new.yml
+	$(NOECHO) $(ECHO) "    - t" >> META_new.yml
+	$(NOECHO) $(ECHO) "    - inc" >> META_new.yml
+	$(NOECHO) $(ECHO) requires: >> META_new.yml
+	$(NOECHO) $(ECHO) "  Module::Pluggable: '3.9'" >> META_new.yml
+	$(NOECHO) $(ECHO) "  Test::More: '0'" >> META_new.yml
+	$(NOECHO) $(ECHO) "version: '0.04'" >> META_new.yml
+	$(NOECHO) $(ECHO) "x_serialization_backend: 'CPAN::Meta::YAML version 0.012'" >> META_new.yml
 	-$(NOECHO) $(MV) META_new.yml $(DISTVNAME)/META.yml
+	$(NOECHO) $(ECHO) Generating META.json
+	$(NOECHO) $(ECHO) {{ > META_new.json
+	$(NOECHO) $(ECHO) "   \"abstract\" : \"Perl extension to beautify SQL.\"," >> META_new.json
+	$(NOECHO) $(ECHO) "   \"author\" : [" >> META_new.json
+	$(NOECHO) $(ECHO) "      \"AndrǸ Rivotti Casimiro ^<rivotti^@cpan.com^>\"" >> META_new.json
+	$(NOECHO) $(ECHO) "   ]," >> META_new.json
+	$(NOECHO) $(ECHO) "   \"dynamic_config\" : 1," >> META_new.json
+	$(NOECHO) $(ECHO) "   \"generated_by\" : \"ExtUtils::MakeMaker version 7.24, CPAN::Meta::Converter version 2.150005\"," >> META_new.json
+	$(NOECHO) $(ECHO) "   \"license\" : [" >> META_new.json
+	$(NOECHO) $(ECHO) "      \"unknown\"" >> META_new.json
+	$(NOECHO) $(ECHO) "   ]," >> META_new.json
+	$(NOECHO) $(ECHO) "   \"meta-spec\" : {{" >> META_new.json
+	$(NOECHO) $(ECHO) "      \"url\" : \"http://search.cpan.org/perldoc?CPAN::Meta::Spec\"," >> META_new.json
+	$(NOECHO) $(ECHO) "      \"version\" : \"2\"" >> META_new.json
+	$(NOECHO) $(ECHO) "   }}," >> META_new.json
+	$(NOECHO) $(ECHO) "   \"name\" : \"SQL-QueryBuilder-Pretty\"," >> META_new.json
+	$(NOECHO) $(ECHO) "   \"no_index\" : {{" >> META_new.json
+	$(NOECHO) $(ECHO) "      \"directory\" : [" >> META_new.json
+	$(NOECHO) $(ECHO) "         \"t\"," >> META_new.json
+	$(NOECHO) $(ECHO) "         \"inc\"" >> META_new.json
+	$(NOECHO) $(ECHO) "      ]" >> META_new.json
+	$(NOECHO) $(ECHO) "   }}," >> META_new.json
+	$(NOECHO) $(ECHO) "   \"prereqs\" : {{" >> META_new.json
+	$(NOECHO) $(ECHO) "      \"build\" : {{" >> META_new.json
+	$(NOECHO) $(ECHO) "         \"requires\" : {{" >> META_new.json
+	$(NOECHO) $(ECHO) "            \"ExtUtils::MakeMaker\" : \"0\"" >> META_new.json
+	$(NOECHO) $(ECHO) "         }}" >> META_new.json
+	$(NOECHO) $(ECHO) "      }}," >> META_new.json
+	$(NOECHO) $(ECHO) "      \"configure\" : {{" >> META_new.json
+	$(NOECHO) $(ECHO) "         \"requires\" : {{" >> META_new.json
+	$(NOECHO) $(ECHO) "            \"ExtUtils::MakeMaker\" : \"0\"" >> META_new.json
+	$(NOECHO) $(ECHO) "         }}" >> META_new.json
+	$(NOECHO) $(ECHO) "      }}," >> META_new.json
+	$(NOECHO) $(ECHO) "      \"runtime\" : {{" >> META_new.json
+	$(NOECHO) $(ECHO) "         \"requires\" : {{" >> META_new.json
+	$(NOECHO) $(ECHO) "            \"Module::Pluggable\" : \"3.9\"," >> META_new.json
+	$(NOECHO) $(ECHO) "            \"Test::More\" : \"0\"" >> META_new.json
+	$(NOECHO) $(ECHO) "         }}" >> META_new.json
+	$(NOECHO) $(ECHO) "      }}" >> META_new.json
+	$(NOECHO) $(ECHO) "   }}," >> META_new.json
+	$(NOECHO) $(ECHO) "   \"release_status\" : \"stable\"," >> META_new.json
+	$(NOECHO) $(ECHO) "   \"version\" : \"0.04\"," >> META_new.json
+	$(NOECHO) $(ECHO) "   \"x_serialization_backend\" : \"JSON::PP version 2.27300\"" >> META_new.json
+	$(NOECHO) $(ECHO) }} >> META_new.json
+	-$(NOECHO) $(MV) META_new.json $(DISTVNAME)/META.json
 
 
 # --- MakeMaker signature section:
@@ -604,21 +599,22 @@ manifest :
 	$(PERLRUN) "-MExtUtils::Manifest=mkmanifest" -e mkmanifest
 
 veryclean : realclean
-	$(RM_F) *~ */*~ *.orig */*.orig *.bak */*.bak *.old */*.old 
+	$(RM_F) *~ */*~ *.orig */*.orig *.bak */*.bak *.old */*.old
 
 
 
 # --- MakeMaker dist_core section:
 
 dist : $(DIST_DEFAULT) $(FIRST_MAKEFILE)
-	$(NOECHO) $(ABSPERLRUN) -l -e 'print '\''Warning: Makefile possibly out of date with $(VERSION_FROM)'\''' \
-	  -e '    if -e '\''$(VERSION_FROM)'\'' and -M '\''$(VERSION_FROM)'\'' < -M '\''$(FIRST_MAKEFILE)'\'';' --
+	$(NOECHO) $(ABSPERLRUN) -l -e "print 'Warning: Makefile possibly out of date with $(VERSION_FROM)'\
+    if -e '$(VERSION_FROM)' and -M '$(VERSION_FROM)' < -M '$(FIRST_MAKEFILE)';" --
 
 tardist : $(DISTVNAME).tar$(SUFFIX)
 	$(NOECHO) $(NOOP)
 
 uutardist : $(DISTVNAME).tar$(SUFFIX)
 	uuencode $(DISTVNAME).tar$(SUFFIX) $(DISTVNAME).tar$(SUFFIX) > $(DISTVNAME).tar$(SUFFIX)_uu
+	$(NOECHO) $(ECHO) 'Created $(DISTVNAME).tar$(SUFFIX)_uu'
 
 $(DISTVNAME).tar$(SUFFIX) : distdir
 	$(PREOP)
@@ -626,6 +622,7 @@ $(DISTVNAME).tar$(SUFFIX) : distdir
 	$(TAR) $(TARFLAGS) $(DISTVNAME).tar $(DISTVNAME)
 	$(RM_RF) $(DISTVNAME)
 	$(COMPRESS) $(DISTVNAME).tar
+	$(NOECHO) $(ECHO) 'Created $(DISTVNAME).tar$(SUFFIX)'
 	$(POSTOP)
 
 zipdist : $(DISTVNAME).zip
@@ -635,12 +632,14 @@ $(DISTVNAME).zip : distdir
 	$(PREOP)
 	$(ZIP) $(ZIPFLAGS) $(DISTVNAME).zip $(DISTVNAME)
 	$(RM_RF) $(DISTVNAME)
+	$(NOECHO) $(ECHO) 'Created $(DISTVNAME).zip'
 	$(POSTOP)
 
 shdist : distdir
 	$(PREOP)
 	$(SHAR) $(DISTVNAME) > $(DISTVNAME).shar
 	$(RM_RF) $(DISTVNAME)
+	$(NOECHO) $(ECHO) 'Created $(DISTVNAME).shar'
 	$(POSTOP)
 
 
@@ -664,25 +663,29 @@ disttest : distdir
 
 
 # --- MakeMaker dist_ci section:
-
 ci :
-	$(PERLRUN) "-MExtUtils::Manifest=maniread" \
-	  -e "@all = keys %{ maniread() };" \
-	  -e "print(qq{Executing $(CI) @all\n}); system(qq{$(CI) @all});" \
-	  -e "print(qq{Executing $(RCS_LABEL) ...\n}); system(qq{$(RCS_LABEL) @all});"
+	$(ABSPERLRUN) -MExtUtils::Manifest=maniread -e "@all = sort keys %{{ maniread() }};\
+print(qq{{Executing $(CI) @all\n}});\
+system(qq{{$(CI) @all}}) == 0 or die $$!;\
+print(qq{{Executing $(RCS_LABEL) ...\n}});\
+system(qq{{$(RCS_LABEL) @all}}) == 0 or die $$!;" --
 
 
 # --- MakeMaker distmeta section:
 distmeta : create_distdir metafile
-	$(NOECHO) cd $(DISTVNAME) && $(ABSPERLRUN) -MExtUtils::Manifest=maniadd -e 'eval { maniadd({q{META.yml} => q{Module meta-data (added by MakeMaker)}}) } ' \
-	  -e '    or print "Could not add META.yml to MANIFEST: $${'\''@'\''}\n"' --
+	$(NOECHO) cd $(DISTVNAME) && $(ABSPERLRUN) -MExtUtils::Manifest=maniadd -e "exit unless -e q{{META.yml}};\
+eval {{ maniadd({{q{{META.yml}} => q{{Module YAML meta-data (added by MakeMaker)}}}}) }}\
+    or die \"Could not add META.yml to MANIFEST: $${{'^@'}}\"" --
+	$(NOECHO) cd $(DISTVNAME) && $(ABSPERLRUN) -MExtUtils::Manifest=maniadd -e "exit unless -f q{{META.json}};\
+eval {{ maniadd({{q{{META.json}} => q{{Module JSON meta-data (added by MakeMaker)}}}}) }}\
+    or die \"Could not add META.json to MANIFEST: $${{'^@'}}\"" --
 
 
 
 # --- MakeMaker distsignature section:
-distsignature : create_distdir
-	$(NOECHO) cd $(DISTVNAME) && $(ABSPERLRUN) -MExtUtils::Manifest=maniadd -e 'eval { maniadd({q{SIGNATURE} => q{Public-key signature (added by MakeMaker)}}) } ' \
-	  -e '    or print "Could not add SIGNATURE to MANIFEST: $${'\''@'\''}\n"' --
+distsignature : distmeta
+	$(NOECHO) cd $(DISTVNAME) && $(ABSPERLRUN) -MExtUtils::Manifest=maniadd -e "eval {{ maniadd({{q{{SIGNATURE}} => q{{Public-key signature (added by MakeMaker)}}}}) }}\
+    or die \"Could not add SIGNATURE to MANIFEST: $${{'^@'}}\"" --
 	$(NOECHO) cd $(DISTVNAME) && $(TOUCH) SIGNATURE
 	cd $(DISTVNAME) && cpansign -s
 
@@ -715,65 +718,89 @@ doc__install : doc_site_install
 	$(NOECHO) $(ECHO) INSTALLDIRS not defined, defaulting to INSTALLDIRS=site
 
 pure_perl_install :: all
-	$(NOECHO) umask 022; $(MOD_INSTALL) \
-		$(INST_LIB) $(DESTINSTALLPRIVLIB) \
-		$(INST_ARCHLIB) $(DESTINSTALLARCHLIB) \
-		$(INST_BIN) $(DESTINSTALLBIN) \
-		$(INST_SCRIPT) $(DESTINSTALLSCRIPT) \
-		$(INST_MAN1DIR) $(DESTINSTALLMAN1DIR) \
-		$(INST_MAN3DIR) $(DESTINSTALLMAN3DIR)
+	$(NOECHO) $(MOD_INSTALL) \
+		read "$(PERL_ARCHLIB)\auto\$(FULLEXT)\.packlist" \
+		write "$(DESTINSTALLARCHLIB)\auto\$(FULLEXT)\.packlist" \
+		"$(INST_LIB)" "$(DESTINSTALLPRIVLIB)" \
+		"$(INST_ARCHLIB)" "$(DESTINSTALLARCHLIB)" \
+		"$(INST_BIN)" "$(DESTINSTALLBIN)" \
+		"$(INST_SCRIPT)" "$(DESTINSTALLSCRIPT)" \
+		"$(INST_MAN1DIR)" "$(DESTINSTALLMAN1DIR)" \
+		"$(INST_MAN3DIR)" "$(DESTINSTALLMAN3DIR)"
 	$(NOECHO) $(WARN_IF_OLD_PACKLIST) \
-		$(SITEARCHEXP)/auto/$(FULLEXT)
+		"$(SITEARCHEXP)\auto\$(FULLEXT)"
 
 
 pure_site_install :: all
-	$(NOECHO) umask 02; $(MOD_INSTALL) \
-		read $(SITEARCHEXP)/auto/$(FULLEXT)/.packlist \
-		write $(DESTINSTALLSITEARCH)/auto/$(FULLEXT)/.packlist \
-		$(INST_LIB) $(DESTINSTALLSITELIB) \
-		$(INST_ARCHLIB) $(DESTINSTALLSITEARCH) \
-		$(INST_BIN) $(DESTINSTALLSITEBIN) \
-		$(INST_SCRIPT) $(DESTINSTALLSITESCRIPT) \
-		$(INST_MAN1DIR) $(DESTINSTALLSITEMAN1DIR) \
-		$(INST_MAN3DIR) $(DESTINSTALLSITEMAN3DIR)
+	$(NOECHO) $(MOD_INSTALL) \
+		read "$(SITEARCHEXP)\auto\$(FULLEXT)\.packlist" \
+		write "$(DESTINSTALLSITEARCH)\auto\$(FULLEXT)\.packlist" \
+		"$(INST_LIB)" "$(DESTINSTALLSITELIB)" \
+		"$(INST_ARCHLIB)" "$(DESTINSTALLSITEARCH)" \
+		"$(INST_BIN)" "$(DESTINSTALLSITEBIN)" \
+		"$(INST_SCRIPT)" "$(DESTINSTALLSITESCRIPT)" \
+		"$(INST_MAN1DIR)" "$(DESTINSTALLSITEMAN1DIR)" \
+		"$(INST_MAN3DIR)" "$(DESTINSTALLSITEMAN3DIR)"
 	$(NOECHO) $(WARN_IF_OLD_PACKLIST) \
-		$(PERL_ARCHLIB)/auto/$(FULLEXT)
+		"$(PERL_ARCHLIB)\auto\$(FULLEXT)"
 
 pure_vendor_install :: all
-	$(NOECHO) umask 022; $(MOD_INSTALL) \
-		$(INST_LIB) $(DESTINSTALLVENDORLIB) \
-		$(INST_ARCHLIB) $(DESTINSTALLVENDORARCH) \
-		$(INST_BIN) $(DESTINSTALLVENDORBIN) \
-		$(INST_SCRIPT) $(DESTINSTALLVENDORSCRIPT) \
-		$(INST_MAN1DIR) $(DESTINSTALLVENDORMAN1DIR) \
-		$(INST_MAN3DIR) $(DESTINSTALLVENDORMAN3DIR)
+	$(NOECHO) $(MOD_INSTALL) \
+		read "$(VENDORARCHEXP)\auto\$(FULLEXT)\.packlist" \
+		write "$(DESTINSTALLVENDORARCH)\auto\$(FULLEXT)\.packlist" \
+		"$(INST_LIB)" "$(DESTINSTALLVENDORLIB)" \
+		"$(INST_ARCHLIB)" "$(DESTINSTALLVENDORARCH)" \
+		"$(INST_BIN)" "$(DESTINSTALLVENDORBIN)" \
+		"$(INST_SCRIPT)" "$(DESTINSTALLVENDORSCRIPT)" \
+		"$(INST_MAN1DIR)" "$(DESTINSTALLVENDORMAN1DIR)" \
+		"$(INST_MAN3DIR)" "$(DESTINSTALLVENDORMAN3DIR)"
+
 
 doc_perl_install :: all
+	$(NOECHO) $(ECHO) Appending installation info to "$(DESTINSTALLARCHLIB)/perllocal.pod"
+	-$(NOECHO) $(MKPATH) "$(DESTINSTALLARCHLIB)"
+	-$(NOECHO) $(DOC_INSTALL) \
+		"Module" "$(NAME)" \
+		"installed into" "$(INSTALLPRIVLIB)" \
+		LINKTYPE "$(LINKTYPE)" \
+		VERSION "$(VERSION)" \
+		EXE_FILES "$(EXE_FILES)" \
+		>> "$(DESTINSTALLARCHLIB)\perllocal.pod"
 
 doc_site_install :: all
-	$(NOECHO) $(ECHO) Appending installation info to $(DESTINSTALLSITEARCH)/perllocal.pod
-	-$(NOECHO) umask 02; $(MKPATH) $(DESTINSTALLSITEARCH)
-	-$(NOECHO) umask 02; $(DOC_INSTALL) \
+	$(NOECHO) $(ECHO) Appending installation info to "$(DESTINSTALLARCHLIB)/perllocal.pod"
+	-$(NOECHO) $(MKPATH) "$(DESTINSTALLARCHLIB)"
+	-$(NOECHO) $(DOC_INSTALL) \
 		"Module" "$(NAME)" \
 		"installed into" "$(INSTALLSITELIB)" \
 		LINKTYPE "$(LINKTYPE)" \
 		VERSION "$(VERSION)" \
 		EXE_FILES "$(EXE_FILES)" \
-		>> $(DESTINSTALLSITEARCH)/perllocal.pod
+		>> "$(DESTINSTALLARCHLIB)\perllocal.pod"
 
 doc_vendor_install :: all
+	$(NOECHO) $(ECHO) Appending installation info to "$(DESTINSTALLARCHLIB)/perllocal.pod"
+	-$(NOECHO) $(MKPATH) "$(DESTINSTALLARCHLIB)"
+	-$(NOECHO) $(DOC_INSTALL) \
+		"Module" "$(NAME)" \
+		"installed into" "$(INSTALLVENDORLIB)" \
+		LINKTYPE "$(LINKTYPE)" \
+		VERSION "$(VERSION)" \
+		EXE_FILES "$(EXE_FILES)" \
+		>> "$(DESTINSTALLARCHLIB)\perllocal.pod"
 
 
 uninstall :: uninstall_from_$(INSTALLDIRS)dirs
 	$(NOECHO) $(NOOP)
 
 uninstall_from_perldirs ::
+	$(NOECHO) $(UNINSTALL) "$(PERL_ARCHLIB)\auto\$(FULLEXT)\.packlist"
 
 uninstall_from_sitedirs ::
-	$(NOECHO) $(UNINSTALL) $(SITEARCHEXP)/auto/$(FULLEXT)/.packlist
+	$(NOECHO) $(UNINSTALL) "$(SITEARCHEXP)\auto\$(FULLEXT)\.packlist"
 
 uninstall_from_vendordirs ::
-
+	$(NOECHO) $(UNINSTALL) "$(VENDORARCHEXP)\auto\$(FULLEXT)\.packlist"
 
 
 # --- MakeMaker force section:
@@ -797,7 +824,7 @@ $(FIRST_MAKEFILE) : Makefile.PL $(CONFIGDEP)
 	$(PERLRUN) Makefile.PL 
 	$(NOECHO) $(ECHO) "==> Your Makefile has been rebuilt. <=="
 	$(NOECHO) $(ECHO) "==> Please rerun the $(MAKE) command.  <=="
-	false
+	$(FALSE)
 
 
 
@@ -805,21 +832,21 @@ $(FIRST_MAKEFILE) : Makefile.PL $(CONFIGDEP)
 
 # --- MakeMaker makeaperl section ---
 MAP_TARGET    = perl
-FULLPERL      = /usr/bin/perl
+FULLPERL      = "C:\Strawberry\perl\bin\perl.exe"
+MAP_PERLINC   = "-Iblib\arch" "-Iblib\lib" "-Ic:\Strawberry\perl\lib" "-Ic:\Strawberry\perl\lib"
 
-$(MAP_TARGET) :: static $(MAKE_APERL_FILE)
+$(MAP_TARGET) :: $(MAKE_APERL_FILE)
 	$(MAKE) $(USEMAKEFILE) $(MAKE_APERL_FILE) $@
 
-$(MAKE_APERL_FILE) : $(FIRST_MAKEFILE) pm_to_blib
+$(MAKE_APERL_FILE) : static $(FIRST_MAKEFILE) pm_to_blib
 	$(NOECHO) $(ECHO) Writing \"$(MAKE_APERL_FILE)\" for this $(MAP_TARGET)
 	$(NOECHO) $(PERLRUNINST) \
-		Makefile.PL DIR= \
+		Makefile.PL DIR="" \
 		MAKEFILE=$(MAKE_APERL_FILE) LINKTYPE=static \
 		MAKEAPERL=1 NORECURS=1 CCCDLFLAGS=
 
 
 # --- MakeMaker test section:
-
 TEST_VERBOSE=0
 TEST_TYPE=test_$(LINKTYPE)
 TEST_FILE = test.pl
@@ -827,67 +854,88 @@ TEST_FILES = t/*.t
 TESTDB_SW = -d
 
 testdb :: testdb_$(LINKTYPE)
-
-test :: $(TEST_TYPE) subdirs-test
-
-subdirs-test ::
 	$(NOECHO) $(NOOP)
 
+test :: $(TEST_TYPE)
+	$(NOECHO) $(NOOP)
 
-test_dynamic :: pure_all
-	PERL_DL_NONLAZY=1 $(FULLPERLRUN) "-MExtUtils::Command::MM" "-e" "test_harness($(TEST_VERBOSE), '$(INST_LIB)', '$(INST_ARCHLIB)')" $(TEST_FILES)
-
-testdb_dynamic :: pure_all
-	PERL_DL_NONLAZY=1 $(FULLPERLRUN) $(TESTDB_SW) "-I$(INST_LIB)" "-I$(INST_ARCHLIB)" $(TEST_FILE)
-
+# Occasionally we may face this degenerate target:
 test_ : test_dynamic
+	$(NOECHO) $(NOOP)
 
-test_static :: test_dynamic
-testdb_static :: testdb_dynamic
+subdirs-test_dynamic :: dynamic pure_all
+
+test_dynamic :: subdirs-test_dynamic
+	$(FULLPERLRUN) "-MExtUtils::Command::MM" "-MTest::Harness" "-e" "undef *Test::Harness::Switches; test_harness($(TEST_VERBOSE), '$(INST_LIB)', '$(INST_ARCHLIB)')" $(TEST_FILES)
+
+testdb_dynamic :: dynamic pure_all
+	$(FULLPERLRUN) $(TESTDB_SW) "-I$(INST_LIB)" "-I$(INST_ARCHLIB)" $(TEST_FILE)
+
+subdirs-test_static :: static pure_all
+
+test_static :: subdirs-test_static
+	$(FULLPERLRUN) "-MExtUtils::Command::MM" "-MTest::Harness" "-e" "undef *Test::Harness::Switches; test_harness($(TEST_VERBOSE), '$(INST_LIB)', '$(INST_ARCHLIB)')" $(TEST_FILES)
+
+testdb_static :: static pure_all
+	$(FULLPERLRUN) $(TESTDB_SW) "-I$(INST_LIB)" "-I$(INST_ARCHLIB)" $(TEST_FILE)
+
 
 
 # --- MakeMaker ppd section:
 # Creates a PPD (Perl Package Description) for a binary distribution.
 ppd :
-	$(NOECHO) $(ECHO) '<SOFTPKG NAME="$(DISTNAME)" VERSION="0,01,0,0">' > $(DISTNAME).ppd
-	$(NOECHO) $(ECHO) '    <TITLE>$(DISTNAME)</TITLE>' >> $(DISTNAME).ppd
-	$(NOECHO) $(ECHO) '    <ABSTRACT>Perl extension to beautify SQL.</ABSTRACT>' >> $(DISTNAME).ppd
-	$(NOECHO) $(ECHO) '    <AUTHOR>André Rivotti Casimiro &lt;rivotti@cpan.com&gt;</AUTHOR>' >> $(DISTNAME).ppd
-	$(NOECHO) $(ECHO) '    <IMPLEMENTATION>' >> $(DISTNAME).ppd
-	$(NOECHO) $(ECHO) '        <DEPENDENCY NAME="Module-Pluggable" VERSION="3,9,0,0" />' >> $(DISTNAME).ppd
-	$(NOECHO) $(ECHO) '        <DEPENDENCY NAME="Test-More" VERSION="0,0,0,0" />' >> $(DISTNAME).ppd
-	$(NOECHO) $(ECHO) '        <OS NAME="$(OSNAME)" />' >> $(DISTNAME).ppd
-	$(NOECHO) $(ECHO) '        <ARCHITECTURE NAME="i486-linux-gnu-thread-multi-5.1" />' >> $(DISTNAME).ppd
-	$(NOECHO) $(ECHO) '        <CODEBASE HREF="" />' >> $(DISTNAME).ppd
-	$(NOECHO) $(ECHO) '    </IMPLEMENTATION>' >> $(DISTNAME).ppd
-	$(NOECHO) $(ECHO) '</SOFTPKG>' >> $(DISTNAME).ppd
+	$(NOECHO) $(ECHO) "<SOFTPKG NAME=\"SQL-QueryBuilder-Pretty\" VERSION=\"0.04\">" > SQL-QueryBuilder-Pretty.ppd
+	$(NOECHO) $(ECHO) "    <ABSTRACT>Perl extension to beautify SQL.</ABSTRACT>" >> SQL-QueryBuilder-Pretty.ppd
+	$(NOECHO) $(ECHO) "    <AUTHOR>AndrǸ Rivotti Casimiro &lt;rivotti@cpan.com&gt;</AUTHOR>" >> SQL-QueryBuilder-Pretty.ppd
+	$(NOECHO) $(ECHO) "    <IMPLEMENTATION>" >> SQL-QueryBuilder-Pretty.ppd
+	$(NOECHO) $(ECHO) "        <REQUIRE NAME=\"Module::Pluggable\" VERSION=\"3.9\" />" >> SQL-QueryBuilder-Pretty.ppd
+	$(NOECHO) $(ECHO) "        <REQUIRE NAME=\"Test::More\" />" >> SQL-QueryBuilder-Pretty.ppd
+	$(NOECHO) $(ECHO) "        <ARCHITECTURE NAME=\"MSWin32-x64-multi-thread-5.20\" />" >> SQL-QueryBuilder-Pretty.ppd
+	$(NOECHO) $(ECHO) "        <CODEBASE HREF=\"\" />" >> SQL-QueryBuilder-Pretty.ppd
+	$(NOECHO) $(ECHO) "    </IMPLEMENTATION>" >> SQL-QueryBuilder-Pretty.ppd
+	$(NOECHO) $(ECHO) ^</SOFTPKG^> >> SQL-QueryBuilder-Pretty.ppd
 
 
 # --- MakeMaker pm_to_blib section:
 
-pm_to_blib : $(TO_INST_PM)
-	$(NOECHO) $(ABSPERLRUN) -MExtUtils::Install -e 'pm_to_blib({@ARGV}, '\''$(INST_LIB)/auto'\'', '\''$(PM_FILTER)'\'')' -- \
-	  lib/SQL/QueryBuilder/Pretty/Database/ANSI/Quote.pm blib/lib/SQL/QueryBuilder/Pretty/Database/ANSI/Quote.pm \
-	  lib/SQL/QueryBuilder/Pretty/Database/ANSI/Space.pm blib/lib/SQL/QueryBuilder/Pretty/Database/ANSI/Space.pm \
-	  lib/SQL/QueryBuilder/Pretty.pm blib/lib/SQL/QueryBuilder/Pretty.pm \
-	  lib/SQL/QueryBuilder/Pretty/Database/ANSI/Comment.pm blib/lib/SQL/QueryBuilder/Pretty/Database/ANSI/Comment.pm \
-	  lib/SQL/QueryBuilder/Pretty/Database/ANSI/Statement.pm blib/lib/SQL/QueryBuilder/Pretty/Database/ANSI/Statement.pm \
-	  lib/SQL/QueryBuilder/Pretty/Database/ANSI/Function.pm blib/lib/SQL/QueryBuilder/Pretty/Database/ANSI/Function.pm \
-	  lib/SQL/QueryBuilder/Pretty/Database/ANSI/Identifier.pm blib/lib/SQL/QueryBuilder/Pretty/Database/ANSI/Identifier.pm \
-	  lib/SQL/QueryBuilder/Pretty/Handler/DBI/db.pm blib/lib/SQL/QueryBuilder/Pretty/Handler/DBI/db.pm \
-	  lib/SQL/QueryBuilder/Pretty/Print.pm blib/lib/SQL/QueryBuilder/Pretty/Print.pm \
-	  lib/SQL/QueryBuilder/Pretty/Database/ANSI/Operator.pm blib/lib/SQL/QueryBuilder/Pretty/Database/ANSI/Operator.pm \
-	  lib/SQL/QueryBuilder/Pretty/Rule.pm blib/lib/SQL/QueryBuilder/Pretty/Rule.pm \
-	  lib/SQL/QueryBuilder/Pretty/Database/ANSI/Clause.pm blib/lib/SQL/QueryBuilder/Pretty/Database/ANSI/Clause.pm \
-	  lib/SQL/QueryBuilder/Pretty/Database/MySQL.pm blib/lib/SQL/QueryBuilder/Pretty/Database/MySQL.pm \
-	  lib/SQL/QueryBuilder/Pretty/Database/ANSI/LogicOperator.pm blib/lib/SQL/QueryBuilder/Pretty/Database/ANSI/LogicOperator.pm \
-	  lib/SQL/QueryBuilder/Pretty/Database/ANSI/Punctuation.pm blib/lib/SQL/QueryBuilder/Pretty/Database/ANSI/Punctuation.pm \
-	  lib/SQL/QueryBuilder/Pretty/Database/MySQL/Clause.pm blib/lib/SQL/QueryBuilder/Pretty/Database/MySQL/Clause.pm \
-	  lib/SQL/QueryBuilder/Pretty/Handler/DBI/db/mysql.pm blib/lib/SQL/QueryBuilder/Pretty/Handler/DBI/db/mysql.pm 
+pm_to_blib : $(FIRST_MAKEFILE) $(TO_INST_PM)
+	$(NOECHO) $(ABSPERLRUN) -MExtUtils::Install -e "pm_to_blib({{@ARGV}}, '$(INST_LIB)\auto', q[$(PM_FILTER)], '$(PERM_DIR)')" -- \
+	  lib/SQL/QueryBuilder/Pretty.pm blib\lib\SQL\QueryBuilder\Pretty.pm \
+	  lib/SQL/QueryBuilder/Pretty/Database/ANSI/Clause.pm blib\lib\SQL\QueryBuilder\Pretty\Database\ANSI\Clause.pm \
+	  lib/SQL/QueryBuilder/Pretty/Database/ANSI/Comment.pm blib\lib\SQL\QueryBuilder\Pretty\Database\ANSI\Comment.pm \
+	  lib/SQL/QueryBuilder/Pretty/Database/ANSI/Function.pm blib\lib\SQL\QueryBuilder\Pretty\Database\ANSI\Function.pm \
+	  lib/SQL/QueryBuilder/Pretty/Database/ANSI/Identifier.pm blib\lib\SQL\QueryBuilder\Pretty\Database\ANSI\Identifier.pm \
+	  lib/SQL/QueryBuilder/Pretty/Database/ANSI/LogicOperator.pm blib\lib\SQL\QueryBuilder\Pretty\Database\ANSI\LogicOperator.pm \
+	  lib/SQL/QueryBuilder/Pretty/Database/ANSI/Operator.pm blib\lib\SQL\QueryBuilder\Pretty\Database\ANSI\Operator.pm \
+	  lib/SQL/QueryBuilder/Pretty/Database/ANSI/Punctuation.pm blib\lib\SQL\QueryBuilder\Pretty\Database\ANSI\Punctuation.pm \
+	  lib/SQL/QueryBuilder/Pretty/Database/ANSI/Quote.pm blib\lib\SQL\QueryBuilder\Pretty\Database\ANSI\Quote.pm \
+	  lib/SQL/QueryBuilder/Pretty/Database/ANSI/Space.pm blib\lib\SQL\QueryBuilder\Pretty\Database\ANSI\Space.pm \
+	  lib/SQL/QueryBuilder/Pretty/Database/ANSI/Statement.pm blib\lib\SQL\QueryBuilder\Pretty\Database\ANSI\Statement.pm 
+	$(NOECHO) $(ABSPERLRUN) -MExtUtils::Install -e "pm_to_blib({{@ARGV}}, '$(INST_LIB)\auto', q[$(PM_FILTER)], '$(PERM_DIR)')" -- \
+	  lib/SQL/QueryBuilder/Pretty/Database/MSSQL.pm blib\lib\SQL\QueryBuilder\Pretty\Database\MSSQL.pm \
+	  lib/SQL/QueryBuilder/Pretty/Database/MSSQL/Quote.pm blib\lib\SQL\QueryBuilder\Pretty\Database\MSSQL\Quote.pm \
+	  lib/SQL/QueryBuilder/Pretty/Database/MySQL.pm blib\lib\SQL\QueryBuilder\Pretty\Database\MySQL.pm \
+	  lib/SQL/QueryBuilder/Pretty/Database/MySQL/Clause.pm blib\lib\SQL\QueryBuilder\Pretty\Database\MySQL\Clause.pm \
+	  lib/SQL/QueryBuilder/Pretty/Handler/DBI/db.pm blib\lib\SQL\QueryBuilder\Pretty\Handler\DBI\db.pm \
+	  lib/SQL/QueryBuilder/Pretty/Handler/DBI/db/mysql.pm blib\lib\SQL\QueryBuilder\Pretty\Handler\DBI\db\mysql.pm \
+	  lib/SQL/QueryBuilder/Pretty/Print.pm blib\lib\SQL\QueryBuilder\Pretty\Print.pm \
+	  lib/SQL/QueryBuilder/Pretty/Rule.pm blib\lib\SQL\QueryBuilder\Pretty\Rule.pm 
 	$(NOECHO) $(TOUCH) pm_to_blib
 
 
 # --- MakeMaker selfdocument section:
+
+# here so even if top_targets is overridden, these will still be defined
+# gmake will silently still work if any are .PHONY-ed but nmake won't
+
+static ::
+	$(NOECHO) $(NOOP)
+
+dynamic ::
+	$(NOECHO) $(NOOP)
+
+config ::
+	$(NOECHO) $(NOOP)
 
 
 # --- MakeMaker postamble section:
